@@ -55,7 +55,7 @@ console.log(result);
  */
 function returnFnResult(fn) {
     function returnFn(fn) {
-        return fn;
+        return fn();
     }
 
     return (fn);
@@ -82,16 +82,47 @@ console.log(resultFn);
    console.log(f()); // выведет 13
  */
 
-var count = (1);
+var returnCounter = function (number = 0) {
 
-function returnCounter() {
-    resultCount = ++count;
+    return function () {
+        return ++number;
+    };
+};
 
-    return resultCount;
-}
-console.log(returnCounter());
-console.log(returnCounter());
-console.log(returnCounter());
+f = returnCounter();
+
+console.log(f());
+console.log(f());
+console.log(f());
+
+// Моё решение 1
+
+// function returnCounter(a = 1) {
+//     var resultCount = ++a;
+
+//     return function() {
+//         return ++resultCount;
+//     }
+// }
+// console.log(returnCounter());
+// console.log(returnCounter());
+// console.log(returnCounter());
+
+// Моё решение 2
+
+// var returnCounter = function () {
+//     var resultCount = 0;
+
+//     return function() {
+//         return resultCount++;
+//     };
+// };
+
+// var counter = returnCounter()
+
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
 
 /*
  Задание 5 *:
@@ -106,10 +137,10 @@ console.log(returnCounter());
 function returnArgumentsArray(a, b, c) {
     const args = [...arguments];
     const arr = Array.from(arguments);
-    console.log(arr);
+    return arr;
 }
 
-returnArgumentsArray(7,8,9);
+console.log(returnArgumentsArray(7, 8, 9));
 
 /*
  Задание 6 *:
