@@ -54,11 +54,7 @@ console.log(result);
    returnFnResult(() => 'привет') вернет 'привет'
  */
 function returnFnResult(fn) {
-    function returnFn(fn) {
-        return fn();
-    }
-
-    return (fn);
+    return fn();
 }
 
 const resultFn = returnFnResult("пельмени");
