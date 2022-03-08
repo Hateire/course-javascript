@@ -15,11 +15,57 @@
             padding: 0;
             margin: 0;
         }
+
+        .form {
+            width: 300px;
+        }
+
+        .form.field {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .form .field input,
+        .form .field textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form .field textarea {
+            resize: none;
+        }
+
+        .form .rewiew-list {
+            max-height: 500px;
+            overflow: scroll;
+        }
     </style>
 </head>
 
 <body>
     <div id="map"></div>
+
+    <script type="text/x-handlebars-template" id="addFormTemplate">
+        <div class="rewiew-list"></div>
+        <div class="form" data-role="rewiew-form">
+            <h3>Отзыв</h3>
+            <div class="field">
+                <input data-role="rewiew-name" type="text" placeholder="Укажите ваше имя">
+            </div>
+            <div class="field">
+                <input data-role="rewiew-place" type="text" placeholder="Укажите место">
+            </div>
+            <div class="field">
+                <textarea data-role="rewiew-text" type="text" placeholder="Оставьте отзыв" rows="5"></textarea>
+            </div>
+
+            <button data-role="rewiew-add">Добавить</button>
+            <span class="form-error"></span>
+        </div>
+    </script>
+
+
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
