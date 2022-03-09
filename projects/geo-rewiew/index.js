@@ -1,4 +1,3 @@
-// import './index.html';
-import GeoRewiew from './geoRewiew.js';
+import Georeview from './georeview.js';
 
-new GeoRewiew();
+new Georeview();

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geo rewiew</title>
+    <title>Geo review</title>
     <style>
         html,
         body,
@@ -35,7 +35,7 @@
             resize: none;
         }
 
-        .form .rewiew-list {
+        .form .review-list {
             max-height: 500px;
             overflow: scroll;
         }
@@ -46,20 +46,20 @@
     <div id="map"></div>
 
     <script type="text/x-handlebars-template" id="addFormTemplate">
-        <div class="rewiew-list"></div>
-        <div class="form" data-role="rewiew-form">
+        <div class="review-list"></div>
+        <div class="form" data-role="review-form">
             <h3>Отзыв</h3>
             <div class="field">
-                <input data-role="rewiew-name" type="text" placeholder="Укажите ваше имя">
+                <input data-role="review-name" type="text" placeholder="Укажите ваше имя">
             </div>
             <div class="field">
-                <input data-role="rewiew-place" type="text" placeholder="Укажите место">
+                <input data-role="review-place" type="text" placeholder="Укажите место">
             </div>
             <div class="field">
-                <textarea data-role="rewiew-text" type="text" placeholder="Оставьте отзыв" rows="5"></textarea>
+                <textarea data-role="review-text" type="text" placeholder="Оставьте отзыв" rows="5"></textarea>
             </div>
 
-            <button data-role="rewiew-add">Добавить</button>
+            <button data-role="review-add">Добавить</button>
             <span class="form-error"></span>
         </div>
     </script>
